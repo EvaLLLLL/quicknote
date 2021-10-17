@@ -3,6 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "main": "main.js",
+  "build": {
+    "appId": "com.evaquicknote.app",
+    "mac": {
+      "target": ["dmg"]
+    },
+    "extends": null
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -18,7 +25,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "dev:elec": "electron .",
+    "elec": "electron .",
+    "dist": "electron-builder --mac",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -43,6 +51,8 @@
     ]
   },
   "devDependencies": {
-    "electron": "^15.2.0"
+    "electron": "^15.2.0",
+    "electron-builder": "^22.13.1",
+    "electron-packager": "^15.4.0"
   }
 }
